@@ -82,8 +82,8 @@ Repositório para realizar as atividades e aplicações do **Projeto BootCamp On
 - [GIT. Documentation](https://git-scm.com/doc)
 - [GITHUB. Documentation](https://docs.github.com/)
 - [SonarCloud. Documentation](https://docs.sonarsource.com/sonarcloud/)
-- [Composer. Documentation](https://docs.sonarsource.com/sonarcloud/)
-- [The Packagist - The Composer Repository](https://docs.sonarsource.com/sonarcloud/)
+- [Composer. Documentation](https://getcomposer.org/)
+- [The Packagist - The Composer Repository](https://packagist.org/)
 
 ##
 <div align="center">Feito por <a href="https://github.com/KuroKagami">Jean/KuroKagami</a>.</div>
