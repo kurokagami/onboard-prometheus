@@ -13,7 +13,7 @@ Repositório para realizar as atividades e aplicações do **Projeto BootCamp On
 - Preparação para o mercado com Boas Práticas, Ánalise e Segurança de dados.
 
 ## Linguagens
-[![HTML5](https://img.shields.io/badge/html5-000?style=for-the-badge&logo=html5&logoColor=ed814b)](https://developer.mozilla.org/en-US/docs/Web/HTML))
+[![HTML5](https://img.shields.io/badge/html5-000?style=for-the-badge&logo=html5&logoColor=ed814b)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/css3-000?style=for-the-badge&logo=css3&logoColor=58b4cb)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/javascript-000?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![PHP](https://img.shields.io/badge/php-000?style=for-the-badge&logo=php&logoColor=b386fa)](https://www.php.net/docs.php)
@@ -31,6 +31,36 @@ Repositório para realizar as atividades e aplicações do **Projeto BootCamp On
 [![JWT](https://img.shields.io/badge/JWT-000?style=for-the-badge&logo=JSON%20web%20tokens)](https://packagist.org/packages/firebase/php-jwt)
 <br>
 
+## Percurso
+![JavaScript](https://img.shields.io/badge/1ºmodulo-000?style=for-the-badge&logo=javascript&logoColor=23F7DF1E)
+- 01 - Visão Geral do Curso e Ferramentas
+- 02 - Instalação e Configuração de Ambiente
+- 03 - Metodologia Ágil & Scrum
+- 04 - Introdução a Web Development
+- 05 - Comunicação Eficaz e Trabalho em Equipe
+- 06 - Sistema de Versionamento Git e Github
+- 07 - Introdução ao Full Stack com JavaScript
+- 08 - Operadores Lógicos e Sintaxes em JavaScript
+
+<br>
+
+![PHP](https://img.shields.io/badge/2ºmodulo-000?style=for-the-badge&logo=PHP&logoColor=B386FA)
+- 01 - Introdução ao PHP & PHTML
+- 02 - Parâmetros e Procedimentos
+- 03 - Análise de Documentação de Liguagens
+- 04 - Váriaveis Globais e Requisições HTTP
+- 05 - Programação Orientada a Objetos
+- 06 - Heranças e Interfaces
+- 07 - CURL e COMPOSER
+- 08 - Htaccess e Gerenciamento de URLs
+- 09 - PHPDOTENV & JWT
+- 10 - Banco de Dados e CRUD
+- 11 - Introdução aos Frameworks
+- 12 - Desensolvimento com Framework na Prática
+
+<br>
+
+![TypeScript](https://img.shields.io/badge/3ºmodulo-000?style=for-the-badge&logo=typescript&logoColor=30A3DC)
 
 ## Instrutor
 <table>
@@ -52,8 +82,8 @@ Repositório para realizar as atividades e aplicações do **Projeto BootCamp On
 - [GIT. Documentation](https://git-scm.com/doc)
 - [GITHUB. Documentation](https://docs.github.com/)
 - [SonarCloud. Documentation](https://docs.sonarsource.com/sonarcloud/)
-- [Composer. Documentation](https://getcomposer.org/doc/)
-- [The Packagist - The Composer Repository](https://packagist.org)
+- [Composer. Documentation](https://docs.sonarsource.com/sonarcloud/)
+- [The Packagist - The Composer Repository](https://docs.sonarsource.com/sonarcloud/)
 
 ##
 <div align="center">Feito por <a href="https://github.com/KuroKagami">Jean/KuroKagami</a>.</div>
