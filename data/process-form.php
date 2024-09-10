@@ -38,16 +38,13 @@ try {
             $user = new Message($name, $email, $message, $phone, $ddd);
 
             //Verfica se criou o objeto para mandar mensagem
-            if($user != ""){
-                $classeCriada = "Classe criada com sucesso";
-            } else {
-                $classeCriada = "Classe não foi criada";
-            }
+            $classeCriada = ($user != "") ? "Classe criada com sucesso" : "Classe não foi criada";
 
             // Executa a query, Envia status e mensagem
             if ($stmt->execute()) {
                 $_SESSION['msg'] = "<p style='color:green;'>Mensagem Enviada com Sucesso</p>";
-                header("Location: ../index.php?status=success&message={$classeCriada}");
+                $classeCriadaEscapada = htmlspecialchars($classeCriada, ENT_QUOTES, 'UTF-8');
+                header("Location: ../index.php?status=success&message=" . urlencode($classeCriadaEscapada));
                 exit();
             } else {
                 throw new Exception('Falha ao enviar mensagem.');
@@ -62,8 +59,8 @@ try {
     }
 } catch (Exception $e) {
     // Codifica a mensagem de erro para ser usada na URL
-    $error_message = urlencode(htmlspecialchars($e->getMessage()));
-    header("Location: ../index.php?status=error&message={$error_message}");
+    $error_message = htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8');
+    header("Location: ../index.php?status=error&message=" . urlencode($error_message));
     exit();
 }
 ?>
