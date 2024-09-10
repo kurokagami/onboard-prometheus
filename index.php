@@ -134,13 +134,13 @@
 
     <?php
     if (isset($_GET['status'])) {
-        $status = $_GET['status'];
-        $message = isset($_GET['message']) ? urldecode($_GET['message']) : '';
-            
+        $status = htmlspecialchars($_GET['status'], ENT_QUOTES, 'UTF-8');
+        $message = isset($_GET['message']) ? htmlspecialchars(urldecode($_GET['message']), ENT_QUOTES, 'UTF-8') : '';
+
         echo "<script>";
-        if ($status == 'success') {
+        if ($status === 'success') {
             echo "alert('Formulário enviado com sucesso e GET Funcionando! " . addslashes($message) . "');";
-        } elseif ($status == 'error') {
+        } elseif ($status === 'error') {
             echo "alert('Ocorreu um erro ao enviar o formulário: " . addslashes($message) . "');";
         }
         // Remover o parâmetro 'status' e 'message' da URL
