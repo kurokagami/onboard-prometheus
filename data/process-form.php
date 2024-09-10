@@ -1,11 +1,12 @@
 <?php
-//Inclui o namespace
+// Inclui o namespace
 use Entities\Message;
 
 try {
     // Inclui arquivo de conexão e autoload
     require_once "./connection.php";
     require_once "../vendor/autoload.php";
+    
     // Verifica a conexão com o banco de dados
     if ($conexao->connect_error) {
         throw new Exception('Erro de conexão: ' . $conexao->connect_error);
@@ -22,7 +23,7 @@ try {
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
             $ddd = filter_input(INPUT_POST, 'ddd', FILTER_SANITIZE_SPECIAL_CHARS);
 
-            // Valida o e-mail uma ultima vez
+            // Valida o e-mail uma última vez
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 throw new Exception('E-mail inválido.');
             }
@@ -34,10 +35,10 @@ try {
             }
             $stmt->bind_param("ssssi", $name, $email, $message, $phone, $ddd);
             
-            //Criação de objeto com composer
+            // Criação de objeto com composer
             $user = new Message($name, $email, $message, $phone, $ddd);
 
-            //Verfica se criou o objeto para mandar mensagem
+            // Verifica se criou o objeto para mandar mensagem
             $classeCriada = ($user != "") ? "Classe criada com sucesso" : "Classe não foi criada";
 
             // Executa a query, Envia status e mensagem
