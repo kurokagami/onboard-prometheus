@@ -1,0 +1,40 @@
+<IfModule mod_rewrite.c>
+    #Ligar Reescrita
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteRule ^(.+)/$ /$1 [R=301,L]
+    
+    
+    #Reescrita para arquivos da public
+    RewriteRule ^styles/(.*)$ public/styles/$1 [L]
+    RewriteRule ^fonts/(.*)$ public/fonts/$1 [L]
+    RewriteRule ^js/(.*)$ public/js/$1 [L]
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+
+    <FilesMatch "\.phtml$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+    
+    <FilesMatch "\.env$">
+    Order allow,deny
+    Deny from all
+    </FilesMatch>
+
+    #Ignorar se arquivo for midia e existir
+    RewriteCond %{REQUEST_URI} \.(css|png|jpg|gif|ttf|js|mp4)$ [NC]
+    RewriteRule ^ - [L]
+
+
+    # Reescrever URLs para o target
+    RewriteRule ^$ index.php?target= [QSA,L]
+    
+    RewriteRule ^(.+)$ index.php?target=$1 [QSA,L]
+
+    #Bloqueio de acesso a pasta de diretorios
+    Options -Indexes
+
+    
+</IfModule>
