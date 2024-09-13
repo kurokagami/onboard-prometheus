@@ -18,7 +18,8 @@
         "firebase/php-jwt": "^6.9",
         "ramsey/uuid": "^4.7",
         "ocramius/proxy-manager": "^1.0",
-        "aws/aws-sdk-php": "^3.308"
+        "aws/aws-sdk-php": "^3.308",
+        "monolog/monolog": "^3.7"
     },
     "autoload": {
         "psr-4": {
