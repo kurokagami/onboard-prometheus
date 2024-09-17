@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Framework\Controller;
 use App\Framework\Routes as Routes;
-
+use GuzzleHttp\RedirectMiddleware;
 
 /**
  * @Routes\Root("");
@@ -16,17 +16,17 @@ final class IndexController extends Controller{
     */
     public function IIndex(){
         $this->view->setBlock("content", "app:main/home");
-        $this->view->render("app:template_site");
+        $this->view->renderContent("template_site")->withStatusCode(201)->render();
     }
     /**
-     * @Routes\Get("index/home");
+     * @Routes\Get("home");
     */
     public function IHome(){
         $this->view->setBlock("content", "app:main/home");
-        $this->view->render("app:template_site");
+        $this->view->renderContent("template_site")->withStatusCode(201)->render();
     }
     /**
-     * @Routes\Get("index/projects");
+     * @Routes\Get("projects");
     */
     public function IProjects(){
         $this->view->setBlock("content", "app:main/projects");

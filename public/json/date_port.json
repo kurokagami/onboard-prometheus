@@ -10,21 +10,21 @@
     {
       "id": "01",
       "title": "The Uncontrollable Void",
-      "image": "./img/projetos/the-uncontrollable-void.png",
+      "image": "assets/images/projects/cover_the_uncontrollable_void.png",
       "description": "Turn-Based Strategy Game. Um jogo de fantásia e estratégia, em um mundo tomado por uma aura que corrompe tudo que toca. Tecnologias: C# | Unity.",
       "link": ""
     },
     {
       "id": "02",
       "title": "Loja Virtual",
-      "image": "./img/projetos/library.png",
+      "image": "assets/images/projects/cover_library_web.png",
       "description": "Projeto de Biblioteca Virtual totalmente em Front. Tecnologias: React Js | HTML | CSS | Sass | JavaScript.",
       "link": ""
     },
     {
       "id": "03",
       "title": "Sistema de Vagas",
-      "image": "./img/projetos/vagas.jpeg",
+      "image": "assets/images/projects/cover_job_vacancies.jpg",
       "description": "Projeto desenvolvido no Curso Senac-Medianeira. Consiste em um Sistema de Vagas de Emprego para Região, desenvolvido totalmente para web, Tecnologias: HTML | CSS | JS | PHP e Banco de Dados SQL. Esse projeto foi desenvolvido em um pequeno grupo onde fui o dev. full stack e não pretendo levar adiante com uma versão pessoal, pelo menos não no momento.",
       "link": ""
     }
@@ -33,25 +33,25 @@
     {
       "id": "01",
       "name": "linkedin",
-      "image": "./img/logos/logo-linkedin.png",
+      "image": "assets/images/logos/logo_linkedin.png",
       "link": "https://www.linkedin.com/in/jean-gabriel-henicka-tormes-0482382ab/"
     },
     {
       "id": "02",
       "name": "github",
-      "image": "./img/logos/logo-github.png",
+      "image": "assets/images/logos/logo_github.png",
       "link": "https://github.com/KuroKagami"
     },
     {
       "id": "03",
       "name": "patreon",
-      "image": "./img/logos/logo-patreon.png",
+      "image": "/assets/images/logos/logo.png",
       "link": ""
     },
     {
       "id": "04",
       "name": "instagram",
-      "image": "./img/logos/logo-instagram.png",
+      "image": "assets/images/logos/logo_instagram.png",
       "link": "https://www.instagram.com/jean_henicka/"
     },   
     {

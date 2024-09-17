@@ -1,3 +1,16 @@
+{% block page_head %}
+    <script src="<?=$this->static("js/script_port.js");?>"></script>
+{% endblock %}
+
+{% block nav_bar %}
+<nav>
+<button onclick="dynamicDisplayDiv('even')"><b>Home</b></button>
+<a href="<?=$this->route("projects")?>" >Projetos</a>
+<button onclick="dynamicDisplayDiv('odd')"><b>Contate-Me</b></button>
+</nav>
+{% endblock %}
+
+
 <div id="box">
     <div id="box-content">
         <div class="content">

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifólio</title>
     <link rel="stylesheet" href="<?=$this->static("styles/cascading.css")?>">
-    <script src="<?=$this->static("js/teste.js")?>"></script>
+    <?php $this->block("page_head", false);?>
 </head>
 <body>
     <div><?=$this->include("templates/header");?></div>
+    <nav><?=$this->block("nav_bar");?></nav>
     <div id="content">
         <?=$this->block("content", false);?>
     </div>

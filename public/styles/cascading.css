@@ -50,13 +50,30 @@ nav {
     align-items: center;
     justify-content: center;
     margin-bottom: auto;
-} nav a {
-    padding: 10px;
+}
+
+nav a, nav button {
+    padding: 9px;
     margin: 10px;
-    border: solid black 1px;
+    border: solid black 3%;
     background-color: #333;
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
+    font: inherit; /* Garante que ambos usem a mesma fonte */
+    text-align: center; /* Centraliza o texto no botão */
+    line-height: 1; /* Ajusta o espaçamento vertical */
+    display: inline-block; /* Faz com que o botão se comporte como o link */
+}
+
+nav button {
+    border: none; /* Remove bordas padrões do botão */
+    appearance: none; /* Remove estilos padrões adicionais */
+}
+
+nav a:hover, nav button:hover {
+    background-color: #555;
+    border-color: #555;
 }
 
 footer {

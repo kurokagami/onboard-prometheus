@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', async function () {
   try {
     // Carregar e processar o arquivo JSON das Medias
-    const response = await fetch('./data/projetos.json');
+    const response = await fetch('public/json/date_port.json');
     const data = await response.json();
 
     // Criar os links de redes sociais

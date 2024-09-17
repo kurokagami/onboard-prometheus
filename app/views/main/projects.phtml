@@ -1,3 +1,14 @@
+{% block page_head %}
+    <script src="<?=$this->static("js/script_proj.js");?>"></script>
+{% endblock %}
+
+{% block nav_bar %}
+<nav>
+<a href="<?=$this->route("home")?>">Home</a>
+<a href="<?=$this->route("projects")?>" >Projetos</a>
+</nav>
+{% endblock %}
+
 <div id="box">
     <div id="box-content">
         <div class="content">
