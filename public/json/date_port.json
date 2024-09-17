@@ -1,0 +1,70 @@
+{
+  "_comentarios": [
+    "Comentários em JSON.",
+    "Campos começando com underline são ignorados pelo sistema, usados para anotações.",
+    "Colchetes é o esboço do JSON, tudo dentro será interpretado como json",
+    "barra é o array e colchete as insformacoes desse array, separando as tabelas por virgula",
+    "tudo deve ser interpretado com aspas dupla ou simples."
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "title": "The Uncontrollable Void",
+      "image": "./img/projetos/the-uncontrollable-void.png",
+      "description": "Turn-Based Strategy Game. Um jogo de fantásia e estratégia, em um mundo tomado por uma aura que corrompe tudo que toca. Tecnologias: C# | Unity.",
+      "link": ""
+    },
+    {
+      "id": "02",
+      "title": "Loja Virtual",
+      "image": "./img/projetos/library.png",
+      "description": "Projeto de Biblioteca Virtual totalmente em Front. Tecnologias: React Js | HTML | CSS | Sass | JavaScript.",
+      "link": ""
+    },
+    {
+      "id": "03",
+      "title": "Sistema de Vagas",
+      "image": "./img/projetos/vagas.jpeg",
+      "description": "Projeto desenvolvido no Curso Senac-Medianeira. Consiste em um Sistema de Vagas de Emprego para Região, desenvolvido totalmente para web, Tecnologias: HTML | CSS | JS | PHP e Banco de Dados SQL. Esse projeto foi desenvolvido em um pequeno grupo onde fui o dev. full stack e não pretendo levar adiante com uma versão pessoal, pelo menos não no momento.",
+      "link": ""
+    }
+  ],
+  "social_medias": [
+    {
+      "id": "01",
+      "name": "linkedin",
+      "image": "./img/logos/logo-linkedin.png",
+      "link": "https://www.linkedin.com/in/jean-gabriel-henicka-tormes-0482382ab/"
+    },
+    {
+      "id": "02",
+      "name": "github",
+      "image": "./img/logos/logo-github.png",
+      "link": "https://github.com/KuroKagami"
+    },
+    {
+      "id": "03",
+      "name": "patreon",
+      "image": "./img/logos/logo-patreon.png",
+      "link": ""
+    },
+    {
+      "id": "04",
+      "name": "instagram",
+      "image": "./img/logos/logo-instagram.png",
+      "link": "https://www.instagram.com/jean_henicka/"
+    },   
+    {
+      "id": "05",
+      "name": "twitter",
+      "image": "./img/logos/logo-facebook.png",
+      "link": ""
+    },    
+    {
+      "id": "06",
+      "name": "facebook",
+      "image": "./img/logos/logo-facebook.png",
+      "link": ""
+    }
+  ]
+}
