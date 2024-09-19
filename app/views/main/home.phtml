@@ -10,8 +10,23 @@
 </nav>
 {% endblock %}
 
+<div class="box">
+<?php if($this->error("errorForm")) : ?> 
+    <div class="box-msg" id="errorMsg">   
+        <h3 class="msg-red">Não foi possível enviar sua mensagem!!<br><br>Janela Fechará em <br><span id="errorTimer">10</span> segundos</h3>
+    </div>
+<?php endif; ?>
 
-<div id="box">
+<?php if($this->error("successForm")) : ?> 
+    <div class="box-msg" id="successMsg">
+        <p class="msg-green">Mensagem Enviada com Sucesso!!<br><br>Janela Fechará em <br><span id="successTimer">10</span> segundos</p>
+    </div>  
+<?php endif; ?>
+
+</div>
+
+
+<div class="box">
     <div id="box-content">
         <div class="content">
             <div id="left">
@@ -78,7 +93,7 @@
                         <h1>Contatar-me</h1>
                     </div>
                     <div id="text">
-                        <form name="contactForm" id='contactForm' action="./data/process-form.php" method="post" autocomplete="off">
+                        <form name="contactForm" id='contactForm' action="<?=$this->route("messages/process/message")?>" method="post" autocomplete="off">
                             <fieldset class='box-form'>
                                 <div class="name">
                                     <label for="name">Nome</label>

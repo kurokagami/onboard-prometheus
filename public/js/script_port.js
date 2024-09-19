@@ -65,65 +65,94 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 });
 
-  // <--- Função de Exibição Dinâmica de Conteúdo ---> //
+// <--- Função de Exibição Dinâmica de Conteúdo ---> //
 
-  function dynamicDisplayDiv(divId) {
-    // Esconde todas as divs
-    document.getElementById('even').classList.add('hidden');
-    document.getElementById('odd').classList.add('hidden');
+function dynamicDisplayDiv(divId) {
+  // Esconde todas as divs
+  document.getElementById('even').classList.add('hidden');
+  document.getElementById('odd').classList.add('hidden');
 
-    // Insere o conteúdo carregado na div correspondente
-    var divToShow = document.getElementById(divId);
-    divToShow.classList.remove('hidden');
+  // Insere o conteúdo carregado na div correspondente
+  var divToShow = document.getElementById(divId);
+  divToShow.classList.remove('hidden');
+}
+
+function autoPhone(event) {
+  const input = event.target;
+  const valor = input.value;
+  const tecla = event.key;
+  const cursorPos = input.selectionStart;
+
+  // Não processar se a tecla pressionada for Backspace, Delete ou Tab
+  if (['Backspace', 'Delete', 'Tab'].includes(tecla)) return;
+
+  // Remove caracteres não numéricos
+  const apenasNumeros = valor.replace(/\D/g, '');
+
+  // Adiciona a formatação
+  const phoneFormat = apenasNumeros
+    .replace(/(\d{2})(\d)/, '($1) $2')
+    .replace(/(\d{5})(\d)/, '$1-$2');
+
+  // Atualiza o valor do input
+  input.value = phoneFormat;
+
+  // Define a posição do cursor para acompanhar os replaces
+  const position = cursorPos + (phoneFormat.length - valor.length);
+  input.setSelectionRange(position, position);
+}
+
+
+// Função para criar as redes sociais no index
+
+function createMedias(social_medias) {
+  const mediaContainer = document.getElementById('social-medias');
+  mediaContainer.innerHTML = '';
+
+  social_medias.forEach((media) => {
+    // Verifica se o link da mídia não está vazio
+    if (media.link !== "") {
+      const a = document.createElement('a');
+      a.href = media.link;
+      a.id = `media-${media.id}`;
+      a.target = '_blank';  // Abre o link em uma nova aba
+      a.rel = 'noopener noreferrer';  // Melhora a segurança
+
+      const img = document.createElement('img');
+      img.src = media.image;
+      img.alt = media.name;
+
+      a.appendChild(img);
+      mediaContainer.appendChild(a);
+    }
+  });
+}
+
+window.onload = function() {
+  function startCountdown(elementId, timerId, duration) {
+      let timeLeft = duration;
+      const element = document.getElementById(elementId);
+      const timer = document.getElementById(timerId);
+
+      const countdown = setInterval(function() {
+          timeLeft--;
+          timer.textContent = timeLeft;
+
+          if (timeLeft <= 0) {
+              clearInterval(countdown);
+              element.style.display = 'none';
+          }
+      }, 1000); // Atualiza a cada segundo
   }
 
-  function autoPhone(event) {
-    const input = event.target;
-    const valor = input.value;
-    const tecla = event.key;
-    const cursorPos = input.selectionStart;
-
-    // Não processar se a tecla pressionada for Backspace, Delete ou Tab
-    if (['Backspace', 'Delete', 'Tab'].includes(tecla)) return;
-
-    // Remove caracteres não numéricos
-    const apenasNumeros = valor.replace(/\D/g, '');
-
-    // Adiciona a formatação
-    const phoneFormat = apenasNumeros
-      .replace(/(\d{2})(\d)/, '($1) $2')
-      .replace(/(\d{5})(\d)/, '$1-$2');
-
-    // Atualiza o valor do input
-    input.value = phoneFormat;
-
-    // Define a posição do cursor para acompanhar os replaces
-    const position = cursorPos + (phoneFormat.length - valor.length);
-    input.setSelectionRange(position, position);
+  // Verifica se a mensagem de erro está presente
+  if (document.getElementById('errorMsg')) {
+      startCountdown('errorMsg', 'errorTimer', 10);
   }
 
-
-  // Função para criar as redes sociais no index
-
-  function createMedias(social_medias) {
-    const mediaContainer = document.getElementById('social-medias');
-    mediaContainer.innerHTML = '';
-
-    social_medias.forEach((media) => {
-      // Verifica se o link da mídia não está vazio
-      if (media.link !== "") {
-        const a = document.createElement('a');
-        a.href = media.link;
-        a.id = `media-${media.id}`;
-        a.target = '_blank';  // Abre o link em uma nova aba
-        a.rel = 'noopener noreferrer';  // Melhora a segurança
-
-        const img = document.createElement('img');
-        img.src = media.image;
-        img.alt = media.name;
-
-        a.appendChild(img);
-        mediaContainer.appendChild(a);
-      }
-    });
+  // Verifica se a mensagem de sucesso está presente
+  if (document.getElementById('successMsg')) {
+      startCountdown('successMsg', 'successTimer', 10);
   }
+};
+

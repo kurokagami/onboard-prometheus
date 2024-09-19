@@ -4,11 +4,10 @@ namespace App\Controllers;
 
 use App\Framework\Controller;
 use App\Framework\Routes as Routes;
-use GuzzleHttp\RedirectMiddleware;
 
 /**
  * @Routes\Root("");
- */
+*/
 
 final class IndexController extends Controller{
     /**

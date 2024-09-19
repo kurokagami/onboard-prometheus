@@ -194,6 +194,24 @@ button {
 
 /*---------------------------------------------*/
 
+.box-msg{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    max-width: 1200px;
+    padding: 2px;
+    text-align: center;
+} .msg-green{
+    background-color: rgb(106, 189, 103);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} .msg-red{
+    background-color: rgb(199, 98, 98);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 /* Estilos para o formulário */
 form {
     display: flex;
@@ -262,7 +280,7 @@ textarea {
 
 
 /* Estilos da Página de Projetos */
-#box {
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,6 +400,9 @@ textarea {
     fieldset.box-form {
         padding: 10px;
 
+    }
+    .box-msg{
+        width: 50%;
     }
 }
 
