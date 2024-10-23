@@ -1,0 +1,52 @@
+{
+    "name": "prometheus/velocity",
+    "description": "f",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Negociation",
+            "email": "32465944+Negociation@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "php-di/php-di": "^6.0",
+        "doctrine/annotations": "^2.0",
+        "nikic/php-parser": "^5.0@alpha",
+        "vlucas/phpdotenv": "^5.5",
+        "firebase/php-jwt": "^6.9",
+        "ramsey/uuid": "^4.7",
+        "ocramius/proxy-manager": "^1.0",
+        "aws/aws-sdk-php": "^3.308",
+        "monolog/monolog": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Contracts\\": "app/contracts/",
+            "App\\Factories\\": "app/factories/",
+            "App\\Modules\\": "app/modules/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "App\\Framework\\Session\\": "core/SessionManager/",
+            "App\\Middleware\\": "app/middleware/",
+            "App\\Services\\": "app/services/",
+            "App\\Framework\\": "core/",
+            "App\\Framework\\Routing\\": "core/Routing/contracts/",
+            "Framework\\": "core/",
+            "Framework\\Routing\\": "core/Routing/",
+            "Framework\\Session\\": "core/SessionManager/",
+            "Framework\\Routing\\Contracts\\": "core/routing/contracts/",
+            "App\\Framework\\Routes\\": "core/annotations/",
+            "Framework\\Utils\\": "core/utils/",
+            "Framework\\Interfaces\\": "core/interfaces/",
+            "Framework\\Exceptions\\": "core/exceptions/",
+            "Framework\\SessionManager\\": "core/SessionManager/"
+
+        },
+        "classmap": [
+            "app/app_modules/"
+        ]
+    }
+}

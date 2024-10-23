@@ -1,0 +1,10 @@
+<?php if(count($messages) > 0) : ?>
+<ul>
+    <?php foreach($messages as $message):?>
+    <li>Message (ID: <?=$message->getId()?>) : <?=$message->getEmail()?>
+    </li>
+    <?php endforeach;?>
+</ul>
+<?php else: ?>
+    <p>Não existe Mensagens</p>
+<?php endif; ?>
